@@ -114,7 +114,7 @@ class DrawingApplication(tkinter.Frame):
 
     def buildWindow(self):
         self.master.title("Draw")
-        bar = tkinter.Menu(self,master)
+        bar = tkinter.Menu(self.master)
         fileMenu = tkinter.Menu(bar,tearoff=0)
 
         def newWindow():
@@ -230,7 +230,7 @@ class DrawingApplication(tkinter.Frame):
         screen.tracer(0)
         sideBar = tkinter.Frame(self,padx=5,pady=5)
         sideBar.pack(side=tkinter.RIGHT,fill=tkinter.BOTH)
-        pointLabel = tkinter.Label(ideBar,text="Width")
+        pointLabel = tkinter.Label(sideBar,text="Width")
         pointLabel.pack()
         widthSize = tkinter.StringVar()
         widthEntry = tkinter.Entry(sideBar,textvariable=widthSize)
